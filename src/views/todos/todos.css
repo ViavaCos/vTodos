@@ -1,0 +1,72 @@
+.todos-wrap {
+  /* position: fixed; */
+  /* top: 30%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  width: 100%;
+  height: calc(100vh - 30px);
+  border: 1px solid cadetblue;
+  box-sizing: border-box;
+}
+
+.todos-header {
+  height: 24px;
+  border-bottom: 1px solid cadetblue;
+}
+
+.todos-body {
+  height: calc(100vh - 56px);
+  overflow-x: auto;
+}
+
+.todos-title {
+  line-height: 24px;
+  color: cadetblue;
+}
+
+.todos-operation {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid cadetblue;
+}
+.todos-operation .operation-input {
+  flex: 1;
+  color: #FFF;
+  padding: 0 10px;
+  border: 0 none;
+  outline: 0 none;
+  background-color: cadetblue;
+}
+.todos-operation .apply {
+  width: 10%;
+  color: cadetblue;
+  line-height: 30px;
+  padding: 0 20px;
+}
+.todos-operation .apply:active {
+  color: #006a6d;
+  background-color: #e9f9fa;
+}
+
+.colorful-stripe {
+  background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+  background-blend-mode: screen;
+  -webkit-animation: colorfulStripeChange 5s infinite alternate linear;
+          animation: colorfulStripeChange 5s infinite alternate linear;
+}
+@-webkit-keyframes colorfulStripeChange {
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+@keyframes colorfulStripeChange {
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
