@@ -2,7 +2,7 @@ import { Component } from 'react'
 import './todos.css'
 import ToDosItem from './todosItem'
 import MyDialog from '../../utils/dialog.tsx'
-import { getTodosList, updateTodo, addTodo, deleteTodo } from '../../api/todo'
+import { getTodosList, updateTodo, addTodo, deleteTodo, finishTodo } from '../../api/todo'
 const Dialog = new MyDialog()
 
 class ToDos extends Component {
@@ -24,12 +24,18 @@ class ToDos extends Component {
    */
   makeAsFinished(id) {
     const { todoData } = this.state
-    todoData.forEach((item, idx) => {
+    todoData.forEach(async (item, idx) => {
       if(item.id === id) {
-        todoData[idx].is_finish = +!todoData[idx].is_finish
+        // todoData[idx].is_finish = todoData[idx].is_finish == 1 ? 0 : 1
+        const res = await finishTodo({
+          id: item.id,
+          is_finish: todoData[idx].is_finish === 1 ? 0 : 1
+        })
+        if(res.code !== 200) return
+        this.getDataList()
       }
     })
-    this.setState({todoData})
+    // this.setState({todoData})
   }
 
   /**
@@ -111,6 +117,11 @@ class ToDos extends Component {
     this.getDataList()
   }
 
+  // 关闭当前窗口
+  handleClose(){
+
+  }
+
   async getDataList() {
     const res = await getTodosList()
     if(res.code === 200) {
@@ -127,6 +138,7 @@ class ToDos extends Component {
       <div className="todos-wrap">
         <div className="todos-header colorful-stripe">
           <p className="todos-title">ToDos</p>
+          <div className="close-btn" onClick={this.handleClose.bind(this)}>x</div>
         </div>
         <div className="todos-body">
           { this.state.todoData.map(item => {

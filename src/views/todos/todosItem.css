@@ -1,8 +1,15 @@
 .todos-item {
   height: 30px;
+  padding-left: 12px;
   display: flex;
   align-items: center;
+  text-align: left;
   color: darkcyan;
+  box-sizing: border-box;
+  /* background-color: rgba(72, 236, 168, 0.3); */
+}
+.todos-item:nth-child(2n + 1) {
+  /* background-color: rgba(71, 210, 245, 0.3); */
 }
 .todos-item:hover {
   color: #18b1b1;

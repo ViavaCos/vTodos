@@ -20,3 +20,8 @@ export const addTodo = (data) => {
 export const deleteTodo = (data) => {
   return request('delete', base + '/deleteTodo', data)
 }
+
+// 标记完成/未完成
+export const finishTodo = (data) => {
+  return request('post', base + '/finishTodo', data)
+}

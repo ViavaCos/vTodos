@@ -77,7 +77,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js && rimraf ../../my-electron-app/build && cp -r build ../../my-electron-app",
+    "build": "node scripts/build.js && rimraf ../my-electron-app/build && cp -r build ../my-electron-app",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
