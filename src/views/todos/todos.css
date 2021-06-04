@@ -3,15 +3,17 @@
   /* top: 30%; */
   /* left: 50%; */
   /* transform: translate(-50%, -50%); */
-  width: 900px;
-  height: calc(600px - 30px);
+  /* width: 900px; */
+  /* height: calc(600px - 30px); */
   /* border: 1px solid cadetblue; */
+  width: 100%;
+  height: calc(100% - 30px);
   padding-bottom: 31px;
   box-sizing: content-box;
 }
 
 .todos-body {
-  height: calc(600px - 56px);
+  height: calc(100vh - 86px);
   overflow-y: auto;
 }
 
@@ -59,7 +61,7 @@
   
 /*定义滚动条的轨道颜色、内阴影及圆角*/
 ::-webkit-scrollbar-track{
-  -webkit-box-shadow: inset 0 0 6px rgb(202, 202, 202);
+  -webkit-box-shadow: inset 0 0 6px rgb(202 202 202 / 0%);
   /* background-color: rosybrown; */
   background-color: #fff;
   border-radius: 3px;
@@ -69,7 +71,7 @@
 /*定义滑块颜色、内阴影及圆角*/
 ::-webkit-scrollbar-thumb{
   border-radius: 7px;
-  -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+  -webkit-box-shadow: inset 0 0 6px rgb(194 187 187);
   background-color: #E8E8E8;
 }
   
