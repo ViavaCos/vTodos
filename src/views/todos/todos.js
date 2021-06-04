@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import './todos.css'
 import ToDosItem from './todosItem'
+import Header from '../header'
 import MyDialog from '../../utils/dialog.tsx'
 import { getTodosList, updateTodo, addTodo, deleteTodo, finishTodo } from '../../api/todo'
 const Dialog = new MyDialog()
@@ -117,16 +118,6 @@ class ToDos extends Component {
     this.getDataList()
   }
 
-  // 关闭当前窗口
-  handleClose(){
-    console.log('handleClose', window.electron);
-    if(window.electron) {
-      const ipcRenderer = window.electron.ipcRenderer;
-      console.log('ipcRenderer:', ipcRenderer);
-      ipcRenderer.send('close-app')
-    }
-  }
-
   async getDataList() {
     const res = await getTodosList()
     if(res.code === 200) {
@@ -141,18 +132,15 @@ class ToDos extends Component {
   render() {
     return (
       <div className="todos-wrap">
-        <div className="todos-header colorful-stripe">
-          <p className="todos-title">ToDos</p>
-          <div className="close-btn" onClick={this.handleClose.bind(this)}>x</div>
-        </div>
+        <Header></Header>
         <div className="todos-body">
           { this.state.todoData.map(item => {
             return <ToDosItem key={item.id} data={item} parent={this}></ToDosItem>
           }) }
         </div>
         <div className="todos-operation">
-          <input className="operation-input" placeholder="Enter something here." onBlur={this.handleTextChange.bind(this)} />
-          <div className="apply" onClick={this.handleApply.bind(this)}>Apply</div>
+          <input className="operation-input" placeholder="在这里输入~~" onBlur={this.handleTextChange.bind(this)} />
+          <div className="apply" onClick={this.handleApply.bind(this)}>提交</div>
         </div>
       </div>
     )

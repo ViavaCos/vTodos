@@ -10,34 +10,9 @@
   box-sizing: content-box;
 }
 
-.todos-header {
-  position: relative;
-  height: 24px;
-  border-bottom: 1px solid cadetblue;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
-  -webkit-app-region: drag;
-}
-.todos-header .close-btn{
-  position: absolute;
-  top: 0;
-  color: cadetblue;
-  right: 12px;
-  -webkit-app-region: no-drag;
-}
-.todos-header .close-btn:hover{
-  color: #fff;
-}
-
 .todos-body {
   height: calc(600px - 56px);
   overflow-y: auto;
-}
-
-.todos-title {
-  line-height: 24px;
-  color: cadetblue;
 }
 
 .todos-operation {
@@ -47,8 +22,9 @@
   bottom: 0;
   width: 100%;
   height: 30px;
-  border-top: 1px solid cadetblue;
-  background-color: #fff;
+  /* border-top: 1px solid cadetblue; */
+  background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+  background-blend-mode: screen;
 }
 .todos-operation .operation-input {
   flex: 1;
@@ -56,38 +32,53 @@
   padding: 0 10px;
   border: 0 none;
   outline: 0 none;
-  background-color: rgb(216 252 253);
+  background-color: transparent;
 }
 .todos-operation .apply {
+  font-size: 14px;
   width: 10%;
-  color: cadetblue;
+  color: #fff;
   line-height: 30px;
-  padding: 0 20px;
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .todos-operation .apply:active {
   color: #006a6d;
   background-color: #e9f9fa;
 }
 .todos-operation .apply:hover {
-  color: #fff;
-  background-color: #2cebab;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.colorful-stripe {
-  background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
-  background-blend-mode: screen;
-  -webkit-animation: colorfulStripeChange 5s infinite alternate linear;
-          animation: colorfulStripeChange 5s infinite alternate linear;
+/*css主要部分的样式*/
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 5px; /*对垂直流动条有效*/
+  height: 5px; /*对水平流动条有效*/
 }
-@-webkit-keyframes colorfulStripeChange {
-  100% {
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
-  }
+  
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgb(202, 202, 202);
+  /* background-color: rosybrown; */
+  background-color: #fff;
+  border-radius: 3px;
 }
-@keyframes colorfulStripeChange {
-  100% {
-    -webkit-filter: hue-rotate(360deg);
-            filter: hue-rotate(360deg);
-  }
+  
+  
+/*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb{
+  border-radius: 7px;
+  -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+  background-color: #E8E8E8;
+}
+  
+/*定义两端按钮的样式*/
+/* ::-webkit-scrollbar-button {
+  background-color:cyan;
+} */
+  
+/*定义右下角汇合处的样式*/
+::-webkit-scrollbar-corner {
+  background:khaki;
 }
