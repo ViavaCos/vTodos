@@ -17,12 +17,14 @@
   -moz-user-select: none;
   -khtml-user-select: none;
   user-select: none;
+  -webkit-app-region: drag;
 }
 .todos-header .close-btn{
   position: absolute;
   top: 0;
   color: cadetblue;
   right: 12px;
+  -webkit-app-region: no-drag;
 }
 .todos-header .close-btn:hover{
   color: #fff;

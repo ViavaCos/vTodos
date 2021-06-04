@@ -119,7 +119,12 @@ class ToDos extends Component {
 
   // 关闭当前窗口
   handleClose(){
-
+    console.log('handleClose', window.electron);
+    if(window.electron) {
+      const ipcRenderer = window.electron.ipcRenderer;
+      console.log('ipcRenderer:', ipcRenderer);
+      ipcRenderer.send('close-app')
+    }
   }
 
   async getDataList() {
