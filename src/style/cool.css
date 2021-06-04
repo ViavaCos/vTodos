@@ -2,7 +2,7 @@
 /* 星光闪耀 */
 .starry{
   position:absolute;
-  top: 0;left: 40%;
+  top: 0;left: 10%;
   transform: translate(-50%, -50%);
   height: 4px;width: 4px;
   border-radius:50%;

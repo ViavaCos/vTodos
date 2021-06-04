@@ -25,6 +25,9 @@ class Header extends Component {
         <div className="starry"></div>
         <div className="todos-logo viavacos"></div>
         <p className="todos-title">微土豆</p>
+        {/* <div className="search">
+          <input></input>
+        </div> */}
         <div className="mini-btn" title="最小化" onClick={this.handleMiNiSize.bind(this)}>-</div>
         <div className="close-btn" title="关闭" onClick={this.handleClose.bind(this)}>x</div>
       </div>
