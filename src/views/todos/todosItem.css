@@ -41,7 +41,9 @@
 .todos-item.is-finish .item-content{
   text-decoration: line-through;
 }
-.todos-item.is-finish .solve-icon, 
+.todos-item.is-finish .solve-icon{
+  color: red;
+} 
 .todos-item.is-finish .close-icon {
   color: #999;
 }

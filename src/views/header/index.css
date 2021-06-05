@@ -37,7 +37,7 @@
   color: cadetblue;
 }
 .todos-header .search {
-  margin: 0 auto;
+  margin: auto auto auto 10%;
   display: inline-block;
 }
 .todos-header .close-btn{

@@ -1,0 +1,21 @@
+.search-wrap {
+    display: flex;
+    padding: 4px 12px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.search-icon {
+    color: #666;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.search-icon::before {
+    content: '\1F50D';
+}
+.search-body {
+    outline: 0 none;
+    border: 0 none;
+    background-color: transparent;
+}

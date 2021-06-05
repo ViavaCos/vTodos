@@ -57,12 +57,12 @@ class ToDosItem extends Component {
       this.state.isEdit
       ? (<div className="todos-item todos-item-edit">
           <input className="edit-content" defaultValue={data.content} type="text" onBlur={this.handleContentChange.bind(this)}/>
-          <button className="solve-icon" onClick={this.changeTodoContent.bind(this)}>√</button>
+          <button className="solve-icon" onClick={this.changeTodoContent.bind(this)}>💾</button>
           <button className="close-icon" onClick={this.changeItemStatus.bind(this, 0)}>x</button>
         </div>)
       : (<div className={'todos-item ' + (data.is_finish ? 'is-finish' : '')}>
           <div className="item-content" onClick={this.changeItemStatus.bind(this, data.is_finish)}>{ data.content }</div>
-          <button className="solve-icon" onClick={this.makeAsFinished.bind(this)}>◉</button>
+          <button className="solve-icon" onClick={this.makeAsFinished.bind(this)}>♥</button>
           <button className="close-icon" onClick={this.delToDoItem.bind(this)}>x</button>
         </div>)
     )
