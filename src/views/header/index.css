@@ -71,3 +71,11 @@
   color: #fff;
   /* background-color: rgba(15, 15, 15, 0.1); */
 }
+.version {
+  margin-left: 4px;
+  font-size: 12px;
+  padding: 0 4px;
+  color: cadetblue;
+  vertical-align: top;
+  background-color: rgba(255, 255, 255, 0.3);
+}

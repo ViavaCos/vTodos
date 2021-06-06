@@ -15,7 +15,8 @@ class ToDos extends Component {
         { id: 2, content: 'test2', is_finish: 1 },
         { id: 3, content: 'test3', is_finish: 0 }
       ],
-      paddingAddedText: ''
+      paddingAddedText: '',
+      debounceFlag: null // 防抖参数
     }
   }
 
@@ -118,10 +119,27 @@ class ToDos extends Component {
     this.getDataList()
   }
 
-  async getDataList() {
-    const res = await getTodosList()
-    if(res.code === 200) {
-      this.setState({todoData: res.data})
+  getDataList(keywords = '') {
+    // 防个抖
+    if(this.state.debounceFlag) {
+      clearTimeout(this.state.debounceFlag)
+    }
+
+    const timer = setTimeout(async () => {
+      const res = await getTodosList({
+        keywords // 搜索关键词
+      })
+      if(res.code === 200) {
+        this.setState({todoData: res.data})
+      }
+    }, 300);
+    this.setState({debounceFlag: timer})
+  }
+
+  // 传给子组件的函数(闭包保留当前this)
+  toChild(keywords){
+    return (keywords) => {
+      this.getDataList(keywords)
     }
   }
 
@@ -132,7 +150,7 @@ class ToDos extends Component {
   render() {
     return (
       <div className="todos-wrap">
-        <Header></Header>
+        <Header getDatas={this.toChild()}></Header>
         <div className="todos-body">
           { this.state.todoData.map(item => {
             return <ToDosItem key={item.id} data={item} parent={this}></ToDosItem>

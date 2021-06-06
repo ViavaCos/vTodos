@@ -58,12 +58,12 @@ class ToDosItem extends Component {
       ? (<div className="todos-item todos-item-edit">
           <input className="edit-content" defaultValue={data.content} type="text" onBlur={this.handleContentChange.bind(this)}/>
           <button className="solve-icon" onClick={this.changeTodoContent.bind(this)}>💾</button>
-          <button className="close-icon" onClick={this.changeItemStatus.bind(this, 0)}>x</button>
+          <button className="close-icon" title="取消" onClick={this.changeItemStatus.bind(this, 0)}>x</button>
         </div>)
-      : (<div className={'todos-item ' + (data.is_finish ? 'is-finish' : '')}>
+      : (<div className={'todos-item ' + (data.is_finish ? 'is-finish' : '')} title="点击进行编辑">
           <div className="item-content" onClick={this.changeItemStatus.bind(this, data.is_finish)}>{ data.content }</div>
-          <button className="solve-icon" onClick={this.makeAsFinished.bind(this)}>♥</button>
-          <button className="close-icon" onClick={this.delToDoItem.bind(this)}>x</button>
+          <button className="solve-icon" title={ data.is_finish ? '标记为未完成' : '标记为已完成' } onClick={this.makeAsFinished.bind(this)}>{ data.is_finish ? '☑' : '☐' }</button>
+          <button className="close-icon" title="删除" onClick={this.delToDoItem.bind(this)}>x</button>
         </div>)
     )
   }
