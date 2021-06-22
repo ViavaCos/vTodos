@@ -1,0 +1,81 @@
+.viavacos {
+    display: inline-block;
+    margin: auto;
+    margin-left: 24px;
+    margin-right: 7px;
+    width: 7px;
+    height: 7px;
+    /* border-top:    7px solid rgb(127 155 0);
+    border-left:  7px dashed rgb(0 155 255);
+    border-right: 7px dotted rgb(173 155 47);
+    border-bottom: 7px solid rgb(135 106 235); */
+    border-top: 7px solid rgb(243 155 155);
+    border-left: 7px dashed rgb(8 152 175);
+    border-right: 7px dotted rgb(255 247 0);
+    border-bottom: 7px solid rgb(152 152 152);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.todos-header {
+display: flex;
+position: relative;
+text-align: left;
+height: 55px;
+line-height: 55px;
+/* border-bottom: 1px solid cadetblue; */
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;
+-webkit-app-region: drag;
+background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
+background-blend-mode: screen;
+overflow: hidden;
+    .todos-title {
+        display: inline-block;
+        vertical-align: middle;
+        color: cadetblue;
+    }
+    .search {
+        margin: auto auto auto 10%;
+        display: inline-block;
+        -webkit-app-region: no-drag;
+    }
+    .close-btn{
+        position: absolute;
+        top: 0;
+        right: 10px;
+        text-align: center;
+        width: 36px;
+        height: 100%;
+        font-size: 20px;
+        color: #424041;
+        -webkit-app-region: no-drag;
+    }
+    .close-btn:hover{
+        color: #fff;
+        /* background-color: rgb(248, 138, 138); */
+    }
+    .mini-btn{
+        position: absolute;
+        top: 0;
+        right: 46px;
+        width: 36px;
+        text-align: center;
+        height: 100%;
+        font-size: 20px;
+        color: #424041;
+        -webkit-app-region: no-drag;
+    }
+    .mini-btn:hover{
+        color: #fff;
+        /* background-color: rgba(15, 15, 15, 0.1); */
+    }
+}
+.version {
+margin-left: 4px;
+font-size: 12px;
+padding: 0 4px;
+color: cadetblue;
+vertical-align: top;
+background-color: rgba(255, 255, 255, 0.3);
+}

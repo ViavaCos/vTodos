@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import './index.css'
+import './index.scss'
 import '../../style/cool.css'
 import ipcRenderer from '../../utils/ipcRenderer'
 import Search from '../search'
