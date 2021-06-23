@@ -26,24 +26,24 @@
 .my-dialog-operation {
   display: flex;
   border-top: 2px solid cadetblue;
-}
-.my-dialog-operation .cancel,
-.my-dialog-operation .confirm{
-  flex: 1;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-}
-.my-dialog-operation .cancel{
-  color: #ccc;
-}
-.my-dialog-operation .confirm{
-  color: #666;
-  border-left: 2px solid cadetblue;
-}
-.my-dialog-operation .cancel:active {
-  color: #666;
-}
-.my-dialog-operation .confirm:active {
-  color: #333;
+    .cancel,
+    .confirm{
+    flex: 1;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    }
+    .cancel{
+    color: #ccc;
+    }
+    .confirm{
+    color: #666;
+    border-left: 2px solid cadetblue;
+    }
+    .cancel:active {
+    color: #666;
+    }
+    .confirm:active {
+    color: #333;
+    }
 }

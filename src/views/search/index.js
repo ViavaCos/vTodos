@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import './index.css'
+import './index.scss'
 
 class Search extends Component {
     constructor(){

@@ -27,29 +27,29 @@
   /* border-top: 1px solid cadetblue; */
   background: linear-gradient(limegreen, transparent), linear-gradient(90deg, skyblue, transparent), linear-gradient(-90deg, coral, transparent);
   background-blend-mode: screen;
-}
-.todos-operation .operation-input {
-  flex: 1;
-  color: #000;
-  padding: 0 10px;
-  border: 0 none;
-  outline: 0 none;
-  background-color: transparent;
-}
-.todos-operation .apply {
-  font-size: 14px;
-  width: 10%;
-  color: #fff;
-  line-height: 30px;
-  padding: 0 10px;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.todos-operation .apply:active {
-  color: #006a6d;
-  background-color: #e9f9fa;
-}
-.todos-operation .apply:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+    .operation-input {
+        flex: 1;
+        color: #000;
+        padding: 0 10px;
+        border: 0 none;
+        outline: 0 none;
+        background-color: transparent;
+    }
+    .apply {
+        font-size: 14px;
+        width: 10%;
+        color: #fff;
+        line-height: 30px;
+        padding: 0 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .apply:active {
+        color: #006a6d;
+    background-color: #e9f9fa;
+    }
+    .apply:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
 }
 
 /*css主要部分的样式*/
