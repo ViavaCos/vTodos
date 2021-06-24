@@ -36,6 +36,9 @@ class Header extends Component {
 
   render(){
     const { getDatas } = this.props
+    const headIcon = {
+      backgroundImage: "url('https://i0.hdslb.com/bfs/bangumi/image/b8e260e70e4c14621f96ec5c45a31db707ea41ed.png@87w_88h_1c_100q.webp')"
+    }
     return (
       <div className="todos-header">
         <div className="starry"></div>
@@ -46,6 +49,10 @@ class Header extends Component {
         </p>
         <div className="search">
           <Search getDatas={getDatas}></Search>
+        </div>
+        <div className="user-info">
+          <div className="head-icon" style={headIcon}></div>
+          <div className="user-name"><span>你的昵称</span></div>
         </div>
         { this.renderDesktopOperation() }
       </div>
