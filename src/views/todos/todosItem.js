@@ -1,5 +1,5 @@
 import { Component  } from 'react'
-import './todosItem.scss'
+import '../../styles/todos/todosItem.scss'
 
 class ToDosItem extends Component {
 

@@ -1,6 +1,6 @@
 import { Component } from 'react'
-import './index.scss'
-import '../../style/cool.scss'
+import '../../styles/header/index.scss'
+import '../../styles/cool.scss'
 import ipcRenderer from '../../utils/ipcRenderer'
 import Search from '../search'
 

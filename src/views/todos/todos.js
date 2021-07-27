@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import './todos.scss'
+import '../../styles/todos/todos.scss'
 import ToDosItem from './todosItem'
 import Header from '../header'
 import MyDialog from '../../utils/dialog.tsx'
