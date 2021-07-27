@@ -39,11 +39,14 @@ class Header extends Component {
     const headIcon = {
       backgroundImage: "url('https://i0.hdslb.com/bfs/bangumi/image/b8e260e70e4c14621f96ec5c45a31db707ea41ed.png@87w_88h_1c_100q.webp')"
     }
+    const refresh = () => {
+      getDatas()
+    }
     return (
       <div className="todos-header">
         <div className="starry"></div>
-        <div className="todos-logo viavacos"></div>
-        <p className="todos-title">
+        <div className="todos-logo viavacos" onClick={refresh}></div>
+        <p className="todos-title" onClick={refresh}>
           微土豆
           <span className="version">{ this.state.isDesktop ? 'pc' : 'web' }</span>
         </p>

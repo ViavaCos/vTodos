@@ -155,6 +155,7 @@ class ToDos extends Component {
           { this.state.todoData.map(item => {
             return <ToDosItem key={item.id} data={item} parent={this}></ToDosItem>
           }) }
+          <div className="loading"></div>
         </div>
         <div className="todos-operation">
           <input className="operation-input" placeholder="在这里输入~~" onBlur={this.handleTextChange.bind(this)} />
