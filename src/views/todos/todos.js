@@ -16,6 +16,7 @@ class ToDos extends Component {
         { id: 3, content: 'test3', is_finish: 0 }
       ],
       paddingAddedText: '',
+      showLoading: false, // 是否显示loading
       debounceFlag: null // 防抖参数
     }
   }
@@ -120,6 +121,7 @@ class ToDos extends Component {
   }
 
   getDataList(keywords = '') {
+    this.setState({ showLoading: true })
     // 防个抖
     if(this.state.debounceFlag) {
       clearTimeout(this.state.debounceFlag)
@@ -130,7 +132,7 @@ class ToDos extends Component {
         keywords // 搜索关键词
       })
       if(res.code === 200) {
-        this.setState({todoData: res.data})
+        this.setState({showLoading: false, todoData: res.data})
       }
     }, 300);
     this.setState({debounceFlag: timer})
@@ -155,7 +157,13 @@ class ToDos extends Component {
           { this.state.todoData.map(item => {
             return <ToDosItem key={item.id} data={item} parent={this}></ToDosItem>
           }) }
-          <div className="loading"></div>
+          <div className="loading-wrap" style={{display: this.state.showLoading ? 'block' : 'none'}}>
+            <span className="loading">
+              <svg viewBox="25 25 50 50" className="loading-svg">
+                <circle cx="50" cy="50" r="20" fill="none"></circle>
+              </svg>
+            </span>
+          </div>
         </div>
         <div className="todos-operation">
           <input className="operation-input" placeholder="在这里输入~~" onBlur={this.handleTextChange.bind(this)} />
