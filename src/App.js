@@ -1,4 +1,4 @@
-import './App.scss';
+import './styles/App.scss';
 import ToDos from './views/todos/todos'
 // import RouterConfig from './router/index'
 

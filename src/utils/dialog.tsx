@@ -1,5 +1,5 @@
 import { render } from 'react-dom'
-import '../style/dialog.scss'
+import '../styles/dialog.scss'
 
 interface Dialog {
   id: number; // 弹窗id (not-use)
