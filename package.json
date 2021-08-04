@@ -1,6 +1,9 @@
 {
-  "name": "react-project",
+  "name": "vTodos",
   "version": "0.1.0",
+  "author": {
+    "name": "viavacos"
+  },
   "private": true,
   "homepage": ".",
   "dependencies": {
