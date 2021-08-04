@@ -10,40 +10,49 @@
   top: 50%;
   left: 50%;
   width: 200px;
-  height: 150px;
+  font-size: 14px;
   transform: translate(-50%, -50%);
   background-color: #fff;
   border: 2px solid cadetblue;
+  box-shadow: 0 0 16px #ccc;
 }
 .my-dialog-title {
+  color: #006a6d;
+  height: 26px;
+  line-height: 26px;
+  padding: 2px 8px;
   border-bottom: 2px solid cadetblue;
 }
 .my-dialog-content {
   height: 96px;
-  text-align: center;
-  line-height: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .my-dialog-operation {
   display: flex;
   border-top: 2px solid cadetblue;
-    .cancel,
-    .confirm{
+  .cancel,
+  .confirm{
     flex: 1;
     height: 30px;
     line-height: 30px;
     text-align: center;
-    }
-    .cancel{
+  }
+  .cancel{
     color: #ccc;
-    }
-    .confirm{
+  }
+  .confirm{
     color: #666;
     border-left: 2px solid cadetblue;
-    }
-    .cancel:active {
-    color: #666;
-    }
-    .confirm:active {
-    color: #333;
-    }
+  }
+  .cancel:active,
+  .confirm:active {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .cancel:hover,
+  .confirm:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
