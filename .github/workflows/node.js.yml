@@ -31,7 +31,7 @@ jobs:
   # - run: npm test
     # set script for build project?
     - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v4 # 第二步是构建和部署，使用的 action 是JamesIves/github-pages-deploy-action。
+      uses: JamesIves/github-pages-deploy-action@main # 第二步是构建和部署，使用的 action 是JamesIves/github-pages-deploy-action。
       env:
         ACCESS_TOKEN: ${{ secrets.commit_secret }}  # must provide a access token.
         BRANCH: gh-pages # branch name of save your new file after build.
