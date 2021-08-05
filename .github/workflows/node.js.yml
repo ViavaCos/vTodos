@@ -19,24 +19,16 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-          
-      # set script for build project?
-      - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@4.0.0 # 第二步是构建和部署，使用的 action 是JamesIves/github-pages-deploy-action。
-        env:
-          ACCESS_TOKEN: ${{ secrets.commit_secret }}  # must provide a access token.
-          BRANCH: gh-pages # branch name of save your new file after build.
-          FOLDER: dist  # folder name, when your run build and generate files.
-          BUILD_SCRIPT: npm install && npm run build # 第二步需要四个环境变量，分别为 GitHub 密钥、发布分支、构建成果所在目录、构建脚本。其中，只有 GitHub 密钥是秘密变量，需要写在双括号里面，其他三个都可以直接写在文件里。
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
