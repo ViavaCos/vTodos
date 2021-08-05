@@ -1,5 +1,5 @@
 {
-  "name": "react-project",
+  "name": "vTodos",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://ViavaCos.github.io/vTodos",
@@ -78,7 +78,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js && rm -rf ../my-electron-app/build/* && cp -r ./build/* ../my-electron-app/build",
+    "build": "node scripts/build.js,
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
