@@ -32,6 +32,11 @@
 .close-icon:active {
   background-color: #ccc;
 }
+.solve-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .close-icon {
   margin: 0 2%;
