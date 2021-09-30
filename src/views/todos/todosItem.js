@@ -1,5 +1,6 @@
 import { Component  } from 'react'
 import '../../styles/todos/todosItem.scss'
+import CheckBox from '../../components/checkbox/index.tsx'
 
 class ToDosItem extends Component {
 
@@ -60,9 +61,11 @@ class ToDosItem extends Component {
           <button className="solve-icon" onClick={this.changeTodoContent.bind(this)}>💾</button>
           <button className="close-icon" title="取消" onClick={this.changeItemStatus.bind(this, 0)}>x</button>
         </div>)
-      : (<div className={'todos-item ' + (data.is_finish ? 'is-finish' : '')} title="点击进行编辑">
+      : (<div className={'todos-item ' + (data.is_finish ? 'is-finish' : '')}>
           <div className="item-content" onClick={this.changeItemStatus.bind(this, data.is_finish)}>{ data.content }</div>
-          <button className="solve-icon" title={ data.is_finish ? '标记为未完成' : '标记为已完成' } onClick={this.makeAsFinished.bind(this)}>{ data.is_finish ? '☑' : '☐' }</button>
+          <div className="solve-icon">
+            <CheckBox title={ data.is_finish ? '标记为未完成' : '标记为已完成' } checked={data.is_finish} onClick={this.makeAsFinished.bind(this)}></CheckBox>
+          </div>
           <button className="close-icon" title="删除" onClick={this.delToDoItem.bind(this)}>x</button>
         </div>)
     )
