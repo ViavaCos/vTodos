@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2847775 */
+  src: url('iconfont.woff2?t=1633230858709') format('woff2'),
+       url('iconfont.woff?t=1633230858709') format('woff'),
+       url('iconfont.ttf?t=1633230858709') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-ashbin:before {
+  content: "\e665";
+}
+
+.i-complete:before {
+  content: "\e669";
+}
+
+.i-edit:before {
+  content: "\e6aa";
+}
+

@@ -1,0 +1,30 @@
+{
+  "id": "2847775",
+  "name": "vTodos",
+  "font_family": "iconfont",
+  "css_prefix_text": "i-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15838430",
+      "name": "ashbin",
+      "font_class": "ashbin",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "15838450",
+      "name": "complete",
+      "font_class": "complete",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "16618154",
+      "name": "edit",
+      "font_class": "edit",
+      "unicode": "e6aa",
+      "unicode_decimal": 59050
+    }
+  ]
+}

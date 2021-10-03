@@ -9,11 +9,12 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 200px;
+  width: 300px;
   font-size: 14px;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  border: 2px solid cadetblue;
+  // border: 1px solid cadetblue;
+  border-radius: 6px;
   box-shadow: 0 0 16px #ccc;
 }
 .my-dialog-title {
@@ -21,7 +22,7 @@
   height: 26px;
   line-height: 26px;
   padding: 2px 8px;
-  border-bottom: 2px solid cadetblue;
+  border-bottom: 1px solid cadetblue;
 }
 .my-dialog-content {
   height: 96px;
@@ -31,7 +32,7 @@
 }
 .my-dialog-operation {
   display: flex;
-  border-top: 2px solid cadetblue;
+  border-top: 1px solid cadetblue;
   .cancel,
   .confirm{
     flex: 1;
@@ -44,7 +45,7 @@
   }
   .confirm{
     color: #666;
-    border-left: 2px solid cadetblue;
+    border-left: 1px solid cadetblue;
   }
   .cancel:active,
   .confirm:active {

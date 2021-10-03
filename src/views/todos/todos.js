@@ -1,9 +1,9 @@
 import { Component } from 'react'
-import '../../styles/todos/todos.scss'
+import '@/styles/todos/todos.scss'
 import ToDosItem from './todosItem'
 import Header from '../header'
-import MyDialog from '../../utils/dialog.tsx'
-import { getTodosList, updateTodo, addTodo, deleteTodo, finishTodo } from '../../api/todo'
+import MyDialog from '@/utils/dialog.tsx'
+import { getTodosList, updateTodo, addTodo, deleteTodo, finishTodo } from '@/api/todo'
 const Dialog = new MyDialog()
 
 class ToDos extends Component {

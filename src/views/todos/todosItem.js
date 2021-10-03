@@ -66,7 +66,9 @@ class ToDosItem extends Component {
           <div className="solve-icon">
             <CheckBox title={ data.is_finish ? '标记为未完成' : '标记为已完成' } checked={data.is_finish} onClick={this.makeAsFinished.bind(this)}></CheckBox>
           </div>
-          <button className="close-icon" title="删除" onClick={this.delToDoItem.bind(this)}>x</button>
+          <button className="close-icon" title="删除" onClick={this.delToDoItem.bind(this)}>
+            <i className="iconfont i-ashbin"></i>
+          </button>
         </div>)
     )
   }
