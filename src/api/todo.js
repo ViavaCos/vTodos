@@ -1,6 +1,6 @@
 import request from '../utils/request'
 // const base = 'http://localhost:5555'
-const base = 'http://viavacos.live:3001'
+const base = `${location.origin}:3001`
 
 
 // 获取列表
