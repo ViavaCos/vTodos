@@ -1,4 +1,5 @@
 import request from '../utils/request'
+
 // const base = 'http://localhost:5555'
 const base = `${location.origin}:3001`
 

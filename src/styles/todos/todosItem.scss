@@ -28,10 +28,10 @@
   border: 0 none;
   outline: 0 none;
 }
-.solve-icon:active,
-.close-icon:active {
-  background-color: #ccc;
-}
+// .solve-icon:active,
+// .close-icon:active {
+//   background-color: #ccc;
+// }
 .solve-icon {
   display: flex;
   align-items: center;
@@ -39,7 +39,8 @@
 }
 
 .close-icon {
-  margin: 0 2%;
+  // margin: 0 2%;
+  background: unset;
 }
 .todos-item.is-finish {
   color: #ccc;

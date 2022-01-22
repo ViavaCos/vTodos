@@ -36,8 +36,9 @@ class Header extends Component {
 
   render(){
     const { getDatas } = this.props
+    const img = require('../../assets/imgs/avatar.png')
     const headIcon = {
-      backgroundImage: "url('https://i0.hdslb.com/bfs/bangumi/image/b8e260e70e4c14621f96ec5c45a31db707ea41ed.png@87w_88h_1c_100q.webp')"
+      backgroundImage: `url(${img.default})`
     }
     const refresh = () => {
       getDatas()

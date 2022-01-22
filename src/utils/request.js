@@ -25,12 +25,9 @@ function request (method, url, data){
 
 
   return new Promise((resolve, reject) => {
-    fetch(url, fetchConfig)
-    .then(response => {
+    fetch(url, fetchConfig).then(response => {
       resolve(response.json())
-    })
-    .catch(error => {
-      reject(error)
+    }).catch(error => {
     })
   })
 }

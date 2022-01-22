@@ -4,9 +4,9 @@ This project was not only using React, But also can run in Electron after build.
 
 Just like this [Repo](https://github.com/ViavaCos/my-electron-app)
 
-[Online Demo](http://101.37.87.30/todos/)  
+[Online Demo](http://viavacos.live/vTodos/)  
 
-[GitHub Demo](https://ViavaCos.github.io/vTodos)[not work]  
+[GitHub Demo](https://ViavaCos.github.io/vTodos)[not work now]  
 
 ## How to start?
 
