@@ -90,7 +90,8 @@
     "test:main": "echo \"Error: no test specified\" && exit 1",
     "start:main": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "all": "npm run build:app&&npm run start:main"
   },
   "eslintConfig": {
     "extends": [
