@@ -1,3 +1,4 @@
+@use 'sass:math';
 $size: 12px;
 
 .check-box {
@@ -20,24 +21,24 @@ $size: 12px;
     border-color: #7ddd7d;
     &::before{
       content: '';
-      width: $size / 2;
-      height: $size / 15;
+      width: math.div($size, 2);
+      height: math.div($size, 15);
       background-color: #7ddd7d;
       transform: rotate(40deg);
       position: absolute;
       left: 0;
-      bottom: $size / 3;
+      bottom: math.div($size, 3);
     }
     &::after{
       content: '';
-      width: $size / 15;
+      width: math.div($size, 15);
       height: $size;
       background-color: #7ddd7d;
       transform: rotate(40deg);
       position: absolute;
       // left: $size / 1.5;
       left: math.div($size, 1.5);
-      bottom: $size / 12;
+      bottom: math.div($size, 12);
     }
   }
 
