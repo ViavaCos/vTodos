@@ -82,7 +82,8 @@
   },
   "scripts": {
     "start:render": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build:app": "(SET SENCE_ENV=APP) && node scripts/build.js",
+    "build:web": "(SET SENCE_ENV=WEB) && node scripts/build.js",
     "deploy_electron": "node scripts/build.js && rm -rf ../my-electron-app/build/* && cp -r ./build/* ../my-electron-app/build",
     "test:render": "node scripts/test.js",
 

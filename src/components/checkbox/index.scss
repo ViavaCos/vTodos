@@ -35,7 +35,8 @@ $size: 12px;
       background-color: #7ddd7d;
       transform: rotate(40deg);
       position: absolute;
-      left: $size / 1.5;
+      // left: $size / 1.5;
+      left: math.div($size, 1.5);
       bottom: $size / 12;
     }
   }
