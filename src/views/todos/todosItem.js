@@ -52,6 +52,21 @@ class ToDosItem extends Component {
     this.setState({ penddingContent: e.nativeEvent.target.value })
   }
 
+  renderEditIcon(is_finish){
+    return !is_finish
+    ? (
+      <div className="edit-icon">
+        <i className="iconfont i-edit"></i>
+      </div>
+    )
+    :
+    (
+      <div className="edit-icon">
+        <i className="iconfont i-edit" style={{'color':'gray'}}></i>
+      </div>
+    )
+  }
+
   render(){
     const data = this.props.data
     return (
@@ -63,6 +78,7 @@ class ToDosItem extends Component {
         </div>)
       : (<div className={'todos-item ' + (data.is_finish ? 'is-finish' : '')}>
           <div className="item-content" onClick={this.changeItemStatus.bind(this, data.is_finish)}>{ data.content }</div>
+          { this.renderEditIcon(data.is_finish) }
           <div className="solve-icon">
             <CheckBox title={ data.is_finish ? '标记为未完成' : '标记为已完成' } checked={data.is_finish} onClick={this.makeAsFinished.bind(this)}></CheckBox>
           </div>

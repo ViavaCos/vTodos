@@ -18,15 +18,22 @@
 .item-content {
   width: 88%;
 }
+.edit-icon {
+  cursor: pointer;
+  color: deepskyblue;
+}
 .solve-icon,
 .close-icon {
-  color: cadetblue;
+  // color: cadetblue;
   width: 4%;
   height: 20px;
   line-height: 20px;
   font-size: 16px;
   border: 0 none;
   outline: 0 none;
+  &:hover {
+    color: deepskyblue;
+  }
 }
 // .solve-icon:active,
 // .close-icon:active {
@@ -39,6 +46,7 @@
 }
 
 .close-icon {
+  cursor: pointer;
   // margin: 0 2%;
   background: unset;
 }

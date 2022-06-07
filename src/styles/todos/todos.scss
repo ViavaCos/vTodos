@@ -6,15 +6,18 @@
   /* width: 900px; */
   /* height: calc(600px - 30px); */
   /* border: 1px solid cadetblue; */
-  width: 100%;
-  height: calc(100% - 30px);
-  padding-bottom: 31px;
-  box-sizing: content-box;
+  width: 96%;
+  height: calc(100vh - 38px);
+  padding-bottom: 30px;
+  // box-sizing: content-box;
+  margin: 2%;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px 5px #00e3ff85;
 }
 
 .todos-body {
   position: relative;
-  height: calc(100vh - 86px);
+  height: calc(100vh - 120px);
   overflow-y: auto;
   &.not-login {
     overflow: hidden;
