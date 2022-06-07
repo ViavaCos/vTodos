@@ -12,7 +12,7 @@ Just like this [Repo](https://github.com/ViavaCos/my-electron-app)
 
 In the project directory and just can run below script:
 
-### `npm run start`
+### `npm run start:render`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -30,9 +30,14 @@ Thank you so much.
 
 ![image](https://user-images.githubusercontent.com/46273525/132211742-96acd826-6d5b-440d-b61f-9d06cc7e90fd.png)
 
-## build
+## build for web
 ```bash
-npm run build
+npm run build:web
+```
+
+## build for app
+```bash
+npm run build:app
 npm run package
 npm run make
 ```

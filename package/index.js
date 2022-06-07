@@ -7,7 +7,7 @@ function createWindow () {
     height: 600,
     // minWidth: 901,
     // minHeight: 601,
-    // transparent: true, // 透明边框
+    transparent: true, // 透明边框
     webPreferences: { // 开启网页功能设置
       nodeIntegration: true, //是否完整的支持 node. 默认值为true
       nodeIntegrationInWorker: false,// 是否在Web工作器中启用了Node集成
@@ -15,8 +15,8 @@ function createWindow () {
     },
     resizable: false,
     // useContentSize: true,
-    backgroundColor: 'border-box', // 背景颜色
-    // opacity: 1, // 窗体透明度 0~1
+    // backgroundColor: '#2e2c29', // 背景颜色
+    opacity: 0.9, // 窗体透明度 0~1
     icon: './icon.png', // 应用图标
     frame: false // 设置无边框窗口（无工具栏、边框、其它图形化外壳）
   })
