@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 $size: 12px;
 
 .check-box {
@@ -36,7 +36,6 @@ $size: 12px;
       background-color: #7ddd7d;
       transform: rotate(40deg);
       position: absolute;
-      // left: $size / 1.5;
       left: math.div($size, 1.5);
       bottom: math.div($size, 12);
     }

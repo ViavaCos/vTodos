@@ -1,7 +1,7 @@
 import request from '../utils/request'
 // const base = 'http://localhost:3001'
-const base = 'http://101.37.87.30:3001'
-// const base = 'https://viavacos.live:3001'
+// const base = 'http://localhost:5555'
+const base = '//viavacos.live:3001'
 
 
 // 获取列表

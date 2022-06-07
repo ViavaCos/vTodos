@@ -3,6 +3,7 @@ import qs from 'qs';
 function request (method, url, data){
   const fetchConfig = {
     method: method.toUpperCase(),
+    mode: "no-cors"
   }
 
   // 设置请求头
