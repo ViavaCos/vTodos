@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>桌面应用程序</title>
+</head>
+<body>
+  <h2>Hellow World!</h2>
+  <br>
+  <br>
+  <br>
+  <button onclick="btnClick()">button</button>
+  <br><br>
+  <button onclick="showDialog()">showDialog</button>
+  <br><br>
+  <button onclick="showNotification()">showNotification</button>
+  <script>
+    // const { remote, ipcRenderer, shell, dialog } = require('electron');
+
+    function showDialog(){
+      const { dialog } = require('electron')
+      console.log("dialog:", dialog, require('electron'));
+    }
+    // const mainProcess = remote.require('./index.js');
+    require('electron').ipcRenderer.on('ping', (event, message) => {
+      console.log(message);
+    })
+
+    function btnClick () {
+      const { ipcRenderer } = require('electron')
+      ipcRenderer.send('mineclick', '666')
+      // const mainProcess = elec.remote.require('./index.js')
+      // mainProcess.test()
+    }
+
+    function showNotification() {
+      const NOTIFICATION_TITLE = '标题'
+      const NOTIFICATION_BODY = 'Notification from the Renderer process. Click to log to console.【内容】'
+      const CLICK_MESSAGE = 'Notification clicked!'
+
+      new Notification(NOTIFICATION_TITLE, { body: NOTIFICATION_BODY })
+        .onclick = () => document.getElementById("output").innerText = CLICK_MESSAGE
+    }
+
+  </script>
+  
+
+  <!-- <button class="choose-dir" onclick="showDialog()">选择文件夹</button> -->
+
+
+</body>
+</html>
