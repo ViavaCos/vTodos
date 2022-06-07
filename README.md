@@ -44,3 +44,6 @@ npm run make
 
 ## merged repo
 my-electron-app
+
+## Hot Reloading
+For the main process, just type `rs` in the console you launched electron-forge from and we will restart your app for you with the new main process code.
