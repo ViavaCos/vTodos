@@ -30,3 +30,12 @@ Thank you so much.
 
 ![image](https://user-images.githubusercontent.com/46273525/132211742-96acd826-6d5b-440d-b61f-9d06cc7e90fd.png)
 
+## build
+```bash
+npm run build
+npm run package
+npm run make
+```
+
+## merged repo
+my-electron-app
