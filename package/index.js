@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, Menu, Notification }  = require('electron')
+const { app, BrowserWindow, ipcMain, Menu, Notification, Tray }  = require('electron')
 const path = require('path')
 
 function createWindow () {
@@ -16,9 +16,9 @@ function createWindow () {
     resizable: false,
     // useContentSize: true,
     // backgroundColor: '#2e2c29', // 背景颜色
-    opacity: 0.9, // 窗体透明度 0~1
+    opacity: 1, // 窗体透明度 0~1
     icon: './icon.png', // 应用图标
-    frame: true // 设置无边框窗口（无工具栏、边框、其它图形化外壳）
+    frame: false // 设置无边框窗口（无工具栏、边框、其它图形化外壳）
   })
 
   // 监听关闭事件
@@ -59,6 +59,8 @@ function createWindow () {
 //   new Notification(notification).show()
 // }
 
+let tray = null
+
 app.whenReady().then(() => {
   console.log('start createWindow...')
   createWindow()
@@ -71,6 +73,13 @@ app.whenReady().then(() => {
 }).then(() => {
   console.log('start showNotification...')
   // showNotification()
+
+  tray = new Tray('./icon.png')
+  const contextMenu = Menu.buildFromTemplate([
+    { label: 'Item1', type: 'radio' }
+  ])
+  tray.setToolTip('This is my vTodos')
+  tray.setContextMenu(contextMenu)
 
   // console.log(dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'] }))
   // dialog.showMessageBoxSync({ 
