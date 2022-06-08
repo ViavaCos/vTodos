@@ -1,9 +1,12 @@
 {
   "name": "vtodos",
+  "productName": "Mine-vTodos",
   "version": "0.1.0",
+  "description": "This is a todos app!",
   "author": {
     "name": "viavacos"
   },
+  "license": "ISC",
   "main": "./package/index.js",
   "private": true,
   "homepage": "https://ViavaCos.github.io/vTodos",
@@ -83,7 +86,7 @@
   "scripts": {
     "start:render": "node scripts/start.js",
     "build:app": "(SET SENCE_ENV=APP) && node scripts/build.js",
-    "build:web": "(SET SENCE_ENV=WEB) && node scripts/build.js",
+    "build:web": "node scripts/build.js",
     "deploy_electron": "node scripts/build.js && rm -rf ../my-electron-app/build/* && cp -r ./build/* ../my-electron-app/build",
     "test:render": "node scripts/test.js",
 
@@ -180,5 +183,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "config": {
+    "forge": "./config.forge.js"
   }
 }

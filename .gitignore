@@ -24,3 +24,5 @@ yarn-error.log*
 
 # package
 out
+*.exe
+*.iss
