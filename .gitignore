@@ -26,3 +26,6 @@ yarn-error.log*
 out
 *.exe
 *.iss
+
+# sonar
+.scannerwork
