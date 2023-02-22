@@ -21,12 +21,18 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
+        
+      # installing Node
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v1
+        with:
+          # this will use the latest Node 12 version
+          node-version: 16.x
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
           node -v
           npm install --force
-          npm audit fix --force
           npm run build:web
 
       - name: Deploy 🚀
