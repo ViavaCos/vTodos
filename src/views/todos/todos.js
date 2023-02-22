@@ -11,9 +11,9 @@ class ToDos extends Component {
     super()
     this.state = {
       todoData: [
-        { id: 1, content: 'test1', is_finish: 0 },
-        { id: 2, content: 'test2', is_finish: 1 },
-        { id: 3, content: 'test3', is_finish: 0 }
+        // { id: 1, content: 'test1', is_finish: 0 },
+        // { id: 2, content: 'test2', is_finish: 1 },
+        // { id: 3, content: 'test3', is_finish: 0 }
       ],
       paddingAddedText: '',
       showLoading: false, // 是否显示loading
