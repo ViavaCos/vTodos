@@ -26,6 +26,7 @@ jobs:
         run: |
           node -v
           npm install --force
+          npm audit fix --force
           npm run build:web
 
       - name: Deploy 🚀
