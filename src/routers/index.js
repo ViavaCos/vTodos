@@ -3,7 +3,10 @@ import { createHashHistory } from 'history'
 import { Router, Route, Link } from 'react-router-dom'
 import ToDos from '../views/todos/todos'
 
-const history = createHashHistory()
+const baseRouterUrl = window.__POWERED_BY_QIANKUN__ ? '/subapp/vtodos' : ''
+const history = createHashHistory({
+  basename: baseRouterUrl
+})
 
 class App extends React.Component {
   render() {

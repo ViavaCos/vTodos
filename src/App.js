@@ -1,6 +1,6 @@
 import './styles/App.scss';
 import ToDos from './views/todos/todos'
-// import RouterConfig from './router/index'
+// import RouterConfig from './routers/index'
 
 function App() {
   return (
