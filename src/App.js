@@ -1,11 +1,11 @@
 import './styles/App.scss';
 import ToDos from './views/todos/todos'
-// import RouterConfig from './routers/index'
+import RouterConfig from './routers/index'
 
 function App() {
   return (
     <div className="App">
-      {/* <RouterConfig></RouterConfig> */}
+      <RouterConfig></RouterConfig>
       <ToDos></ToDos>
     </div>
   );

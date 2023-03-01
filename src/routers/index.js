@@ -33,8 +33,8 @@ class RouterConfig extends React.Component {
   render() {
     return (
       <Router history={history}>
-        <Route path="/" componet={App}>a</Route>
-        <Route path="/todos" component={Todos}>b</Route>
+        <Route path="/" componet={App}></Route>
+        <Route path="/todos" component={Todos}></Route>
       </Router>
     )
   }
