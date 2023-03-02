@@ -1,3 +1,4 @@
+import '@/utils/publicPath' // 解决qiankun框架问题
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
